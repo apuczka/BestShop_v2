@@ -1,0 +1,116 @@
+@import "../settings/_variables.scss";
+@import "../settings/_mixins.scss";
+
+
+header {
+  width: 100vw;
+  display: flex;
+  //justify-content: center;
+  //flex-direction: column;
+
+  nav {
+    //width: 100%;
+    //display: flex;
+    //align-items: center;
+    box-shadow: 0 3px 6px #00000029;
+    @include desktop {
+      justify-content: center;
+    }
+  }
+}
+.container {
+  //width: 100%;
+  padding: 0 15px;
+  display: flex;
+  //justify-content: space-between;
+  align-items: center;
+
+
+  @include desktop {
+    width: 1352px;
+    padding: 0;
+  }
+
+  .logo {
+    color: $color-primary;
+    font-family: $font-Raleway;
+    font-weight: 300;
+    font-size: 2em;
+    margin: 0.5em 0;
+  }
+  ul {
+    display: none;
+    font-family: $font-Open;
+    font-weight: bold;
+    font-size: 11px;
+    color: $color-grey;
+    @include tablet {
+      display: flex;
+      justify-content: flex-end;
+      width: 100vw;
+
+
+    }
+
+  }
+  li {
+    &:not(.nav__contact) {
+      margin-right: 95px;
+    }
+    &:hover {
+      color: #000000;
+      text-decoration: underline 4px;
+      text-decoration-color: $color-primary;
+      text-underline-offset: 26px;
+      cursor: pointer;
+    }
+  }
+
+}
+
+
+
+
+
+.opener {
+  margin-top: 130px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    font-family: $font-Raleway;
+    font-size: 49px;
+  }
+  .slogan {
+    font-family: $font-Open;
+    font-size: 16px;
+    margin: 2em;
+    padding: 0 2.5em;
+    text-align: center;
+    line-height: initial;
+  }
+  a {
+    button {
+      width: 310px;
+      height: 67px;
+      background-color: $color-primary;
+      color: white;
+      font-size: 1em;
+      border: none;
+      border-radius: 40px;
+      box-shadow: 5px 10px 14px $color-primary-shadow;
+      @include tablet {
+        width: 440px;
+      }
+    }
+  }
+}
+img {
+  width: inherit;
+}
