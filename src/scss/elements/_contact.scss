@@ -1,0 +1,112 @@
+@import "../settings/_variables.scss";
+@import "../settings/_mixins.scss";
+
+
+.contact {
+  display: flex;
+  justify-content: center;
+  margin-top: 179px;
+}
+.contact .container {
+  display: flex;
+  align-items: flex-start;
+  width: 896px;
+}
+.contact p {
+  font-family: var(--font-Open);
+  font-size: 16px;
+
+}
+.questions{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info {
+  display: flex;
+  gap: 57px;
+}
+.info p {
+  color: var(--color-grey);
+}
+.mail,
+.phone {
+  display: flex;
+  align-items: center;
+}
+.mail::before {
+  content: url("../../assets/Mail Icon.svg");
+  width: 27px;
+  height: 27px;
+}
+.phone::before {
+  content: url("../../assets/Phone Icon.svg");
+  width: 27px;
+  height: 27px;
+}
+.questions>p {
+  margin: 22px 0 42px 0;
+}
+.leave_name {
+  width: 440px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+input[type="text"],
+input[type="email"] {
+  width: 440px;
+  height: 57px;
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid #95989A;
+  padding-bottom: 43px;
+
+}
+input[type="email"] {
+  margin-bottom: 30px;
+}
+
+input::placeholder {
+  color: #08A6E4;
+  font-size: 11px;
+}
+.tick {
+  font-size: 12px;
+  color: #707070;
+  display: flex;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  display: flex;
+  color: blue;
+  height: 24px;
+  flex-shrink: 0;
+  flex-basis: 24px;
+  border: 1px solid #95989A;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.tick input:checked {
+  background-image: url("../../assets/Checkmark.svg");
+  background-size: cover;
+
+}
+.leave_name button {
+  width: 226px;
+  height: 57px;
+  margin-top: 20px;
+  margin-bottom: 59px;
+  border: 0;
+  border-radius: 35px;
+  box-shadow: 5px 10px 14px var(--color-primary-shadow);
+  background-color: var(--color-primary);
+  color: white;
+  font-family: var(--font-Open);
+  font-weight: bold;
+  font-size: 13px;
+}

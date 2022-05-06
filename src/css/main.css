@@ -3,7 +3,7 @@ header {
   display: flex;
 }
 header nav {
-  box-shadow: 0 3px 6px #00000029;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1607843137);
 }
 @media (min-width: 1352px) {
   header nav {
@@ -36,7 +36,7 @@ header nav {
   font-size: 11px;
   color: #A5A5A5;
 }
-@media (min-width: 800px) {
+@media (max-width: 1024xpx) {
   .container ul {
     display: flex;
     justify-content: flex-end;
@@ -89,7 +89,7 @@ header nav {
   border-radius: 40px;
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.16);
 }
-@media (min-width: 800px) {
+@media (max-width: 1024xpx) {
   .opener a button {
     width: 440px;
   }
@@ -112,7 +112,7 @@ header nav {
   margin: 1.5em 1em 0 1em;
   text-align: center;
 }
-@media (min-width: 800px) {
+@media (max-width: 1024xpx) {
   .statistics h2 {
     margin: 3em 1em;
   }
@@ -122,7 +122,7 @@ header nav {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 800px) {
+@media (max-width: 1024xpx) {
   .boxes {
     flex-direction: row;
   }
@@ -137,7 +137,7 @@ header nav {
 .box2 {
   margin-right: 0;
 }
-@media (min-width: 800px) {
+@media (max-width: 1024xpx) {
   .box1,
 .box2 {
     margin-right: 185px;
@@ -189,7 +189,7 @@ img + p {
   font-size: 16px;
   color: #A5A5A5;
 }
-@media (min-width: 800px) {
+@media (max-width: 1024xpx) {
   .content__box {
     margin-bottom: 121px;
   }
@@ -256,7 +256,7 @@ img + p {
   z-index: 1;
   top: 40px;
 }
-@media (min-width: 800px) {
+@media (max-width: 1024xpx) {
   .box_mac img {
     width: 386px;
     height: 219px;
@@ -279,7 +279,7 @@ img + p {
   top: 20px;
   right: 90px;
 }
-@media (min-width: 800px) {
+@media (max-width: 1024xpx) {
   .shape::after {
     width: 180px;
     height: 180px;
@@ -514,6 +514,389 @@ h3 {
 
 .premium button {
   background-color: #55DFB4;
+}
+
+/**
+ * Calculator Section
+ */
+.calc {
+  padding: 80px 0;
+  background-color: #F7F7F7;
+}
+@media (max-width: 1024xpx) {
+  .calc {
+    padding: 30px 15px;
+  }
+}
+.calc h2 {
+  text-align: center;
+  font-size: 2.25rem;
+  font-family: "Raleway", sans-serif;
+}
+.calc__columns {
+  max-width: 865px;
+  margin: 50px auto 0;
+  display: flex;
+}
+@media (max-width: 1024xpx) {
+  .calc__columns {
+    display: block;
+  }
+}
+.calc__form {
+  width: 50%;
+  margin-right: 20px;
+}
+@media (max-width: 1024xpx) {
+  .calc__form {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+.calc__input input, .calc__select .select__input {
+  color: #A5A5A5;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #08A6E4;
+  padding: 11px 20px;
+  line-height: 1em;
+  font-size: 0.8125rem;
+  box-shadow: 0 3px 6px rgba(7, 172, 230, 0.16);
+  margin-bottom: 20px;
+  background-color: white;
+}
+.calc__input input::-moz-placeholder {
+  color: #A5A5A5;
+}
+.calc__input input:-ms-input-placeholder {
+  color: #A5A5A5;
+}
+.calc__input input::placeholder {
+  color: #A5A5A5;
+}
+.calc__select {
+  position: relative;
+}
+.calc__select .select__input {
+  position: relative;
+  height: 40px;
+  vertical-align: middle;
+  padding: 13px 20px;
+  cursor: pointer;
+}
+.calc__select .select__input::after {
+  content: "";
+  background-image: url("../../assets/Arrow Down.svg");
+  width: 22px;
+  height: 22px;
+  display: block;
+  position: absolute;
+  right: 14px;
+  top: 9px;
+}
+.calc__select .select__dropdown {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #FB3B64;
+  overflow: hidden;
+}
+.calc__select .select__dropdown li {
+  font-size: 13px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.calc__select .select__dropdown li:hover {
+  background-color: #F7F7F7;
+}
+.calc__select.open .select__input::after {
+  transform: rotate(180deg);
+}
+.calc__select.open .select__dropdown {
+  display: block;
+}
+.calc .form__checkbox .consent__text {
+  padding-top: 4px;
+}
+.calc__summary {
+  width: 50%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1024xpx) {
+  .calc__summary {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
+.calc__summary .summary__total,
+.calc__summary .list__item {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 6px;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 0.875rem;
+  display: none;
+}
+.calc__summary .summary__total.open,
+.calc__summary .list__item.open {
+  display: flex;
+}
+.calc__summary .summary__total {
+  width: 50%;
+  align-self: flex-end;
+  margin-top: 22px;
+  padding: 8px 20px;
+  background-color: #08A6E4;
+}
+.calc__summary .summary__total .total__price {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.calc__summary .list__item {
+  padding: 6px 20px;
+  background-color: #55DFB4;
+  margin-bottom: 8px;
+}
+.calc__summary .list__item .item__price {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1024xpx) {
+  .form {
+    margin-top: 20px;
+  }
+}
+.form__field {
+  display: flex;
+  flex-direction: column;
+}
+.form__field:first-of-type {
+  margin-bottom: 42px;
+}
+.form__label {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #08A6E4;
+  line-height: 0.9rem;
+  letter-spacing: 3px;
+  font-size: 0.6875rem;
+}
+.form__input {
+  border: none;
+  border-bottom: 1px solid #A5A5A5;
+  background-color: transparent;
+  line-height: 2.625rem;
+}
+.form__consent {
+  margin-top: 30px;
+}
+.form__checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1.375rem;
+}
+.form__checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.form__checkbox input:checked ~ .checkbox {
+  background-image: url(../../assets/Checkmark.svg);
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+.form__checkbox .checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border: 1px solid #A5A5A5;
+  border-radius: 4px;
+}
+.form__checkbox .consent__text {
+  margin: 0 10px;
+  font-size: 0.75rem;
+  color: #A5A5A5;
+  line-height: 17px;
+}
+.form .btn {
+  font-size: 0.8125rem;
+  padding: 20px 97px;
+  align-self: flex-end;
+  margin-top: 20px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  margin-top: 179px;
+}
+
+.contact .container {
+  display: flex;
+  align-items: flex-start;
+  width: 896px;
+}
+
+.contact p {
+  font-family: var(--font-Open);
+  font-size: 16px;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  gap: 57px;
+}
+
+.info p {
+  color: var(--color-grey);
+}
+
+.mail,
+.phone {
+  display: flex;
+  align-items: center;
+}
+
+.mail::before {
+  content: url("../../assets/Mail Icon.svg");
+  width: 27px;
+  height: 27px;
+}
+
+.phone::before {
+  content: url("../../assets/Phone Icon.svg");
+  width: 27px;
+  height: 27px;
+}
+
+.questions > p {
+  margin: 22px 0 42px 0;
+}
+
+.leave_name {
+  width: 440px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+input[type=text],
+input[type=email] {
+  width: 440px;
+  height: 57px;
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid #95989A;
+  padding-bottom: 43px;
+}
+
+input[type=email] {
+  margin-bottom: 30px;
+}
+
+input::-moz-placeholder {
+  color: #08A6E4;
+  font-size: 11px;
+}
+
+input:-ms-input-placeholder {
+  color: #08A6E4;
+  font-size: 11px;
+}
+
+input::placeholder {
+  color: #08A6E4;
+  font-size: 11px;
+}
+
+.tick {
+  font-size: 12px;
+  color: #707070;
+  display: flex;
+}
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: flex;
+  color: blue;
+  height: 24px;
+  flex-shrink: 0;
+  flex-basis: 24px;
+  border: 1px solid #95989A;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.tick input:checked {
+  background-image: url("../../assets/Checkmark.svg");
+  background-size: cover;
+}
+
+.leave_name button {
+  width: 226px;
+  height: 57px;
+  margin-top: 20px;
+  margin-bottom: 59px;
+  border: 0;
+  border-radius: 35px;
+  box-shadow: 5px 10px 14px var(--color-primary-shadow);
+  background-color: var(--color-primary);
+  color: white;
+  font-family: var(--font-Open);
+  font-weight: bold;
+  font-size: 13px;
+}
+
+footer nav {
+  box-shadow: 0 -5px 40px rgba(0, 0, 0, 0.1607843137);
+}
+
+footer .logo {
+  font-size: 26px;
+  margin: 20px 0 6px 0;
+}
+
+footer p {
+  color: var(--color-grey);
+  font-size: 11px;
+  margin-bottom: 17px;
+}
+
+.icons > a {
+  margin-right: 20px;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/

@@ -1,0 +1,19 @@
+@import "../settings/_variables.scss";
+@import "../settings/_mixins.scss";
+
+
+footer nav {
+  box-shadow: 0 -5px 40px #00000029;
+}
+footer .logo {
+  font-size: 26px;
+  margin: 20px 0 6px 0;
+}
+footer p {
+  color: var(--color-grey);
+  font-size: 11px;
+  margin-bottom: 17px;
+}
+.icons > a {
+  margin-right: 20px;
+}
